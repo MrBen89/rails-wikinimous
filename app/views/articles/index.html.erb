@@ -1,7 +1,9 @@
-<ul>
-  <% @articles.each do |article| %>
-    <li>
+
+<% @articles.each do |article| %>
+  <article class="mb-3">
+    <h2>
       <%= link_to article.title, article_path(article) %>
-    </li>
-  <% end %>
-</ul>
+    </h2>
+    <%= article.content.truncate_words(8)%>
+  </article>
+<% end %>

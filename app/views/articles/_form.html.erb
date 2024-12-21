@@ -1,7 +1,11 @@
 <%= form_with model: article do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :content %>
-  <%= f.text_field :content %>
-  <%= f.submit %>
+<div class="mb-3">
+  <%= f.label :title, class: "form-label required" %>
+  <%= f.text_field :title, class: "form-control"  %>
+</div>
+<div class="mb-3">
+  <%= f.label :content, class: "form-label required" %>
+  <%= f.text_area :content, class: "form-control" %>
+</div>
+  <%= f.submit class: "btn btn-outline-success"%>
 <% end %>
